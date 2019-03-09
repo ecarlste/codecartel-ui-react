@@ -1,23 +1,33 @@
 {
   "name": "codecartel-ui-react",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.0.5",
+  "description": "A set of React components for use in bulding apps at CodeCartel",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "npm run clean && babel src -d lib",
+    "clean": "rm -rf lib"
   },
-  "author": "",
+  "author": {
+    "name": "Erik Carlsten",
+    "email": "ecarlste@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-preset-minify": "^0.5.0"
   },
   "dependencies": {
     "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.85.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecarlste/codecartel-ui-react.git"
   }
 }

@@ -1,1 +1,5 @@
-export * from "./SearchBar/SearchBar";
+import SearchBar from "./SearchBar/SearchBar";
+
+module.exports = {
+  SearchBar
+};

@@ -1,9 +1,10 @@
 {
   "name": "codecartel-ui-react",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A set of React components for use in bulding apps at CodeCartel",
   "main": "lib/index.js",
   "scripts": {
+    "test": "jest",
     "build": "npm run clean && babel src -d lib",
     "clean": "rm -rf lib"
   },
@@ -18,13 +19,19 @@
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
-    "babel-preset-minify": "^0.5.0"
+    "babel-jest": "^24.3.1",
+    "babel-preset-minify": "^0.5.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "jest": "^24.3.1"
   },
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.85.0"
+  },
+  "peerDependencies": {
+    "semantic-ui-css": "^2.4.1"
   },
   "repository": {
     "type": "git",

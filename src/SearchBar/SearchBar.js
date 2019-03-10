@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Segment, Form } from "semantic-ui-react";
+import { Segment, Form, Search } from "semantic-ui-react";
 // import "semantic-ui-css/semantic.min.css";
 
 class SearchBar extends Component {
@@ -10,7 +10,7 @@ class SearchBar extends Component {
       <Segment>
         <Form onSubmit={this.onFormSubmit}>
           <Form.Field>
-            <label className="foo">Image Search</label>
+            <label>{this.props.label}</label>
             <input
               type="text"
               value={this.state.term}
@@ -28,5 +28,9 @@ class SearchBar extends Component {
     this.props.onSubmit(this.state.term);
   };
 }
+
+SearchBar.defaultProps = {
+  label: "Search Label"
+};
 
 export default SearchBar;

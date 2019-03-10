@@ -1,11 +1,11 @@
 {
   "name": "codecartel-ui-react",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A set of React components for use in bulding apps at CodeCartel",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "build": "npm run clean && babel src -d lib",
+    "build": "npm run clean && babel src -d lib --ignore '**/*.test.js'",
     "clean": "rm -rf lib"
   },
   "author": {
@@ -27,8 +27,7 @@
   },
   "dependencies": {
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "semantic-ui-react": "^0.85.0"
+    "react-dom": "^16.8.4"
   },
   "peerDependencies": {
     "semantic-ui-css": "^2.4.1"

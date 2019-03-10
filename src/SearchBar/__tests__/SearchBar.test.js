@@ -1,7 +1,6 @@
 import React from "react";
 import Enzyme, { shallow, mount, render } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import { Segment } from "semantic-ui-react";
 
 import { SearchBar } from "../../index";
 
@@ -14,12 +13,12 @@ describe("A suite", () => {
     );
   });
 
-  it("should be of type Segment", () => {
-    expect(shallow(<SearchBar />).type()).toEqual(Segment);
-  });
-
   it("should mount in a full DOM", () => {
     expect(mount(<SearchBar />).find(".segment").length).toBe(1);
+  });
+
+  it("should give additional 'search-bar' class name to Segment container", () => {
+    expect(mount(<SearchBar />).find(".search-bar.ui.segment").length).toBe(1);
   });
 
   it("should render to static HTML", () => {

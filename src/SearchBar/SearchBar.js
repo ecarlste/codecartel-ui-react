@@ -1,24 +1,22 @@
 import React, { Component } from "react";
-import { Segment, Form, Search } from "semantic-ui-react";
-// import "semantic-ui-css/semantic.min.css";
 
 class SearchBar extends Component {
   state = { term: "" };
 
   render() {
     return (
-      <Segment>
-        <Form onSubmit={this.onFormSubmit}>
-          <Form.Field>
+      <div className="search-bar ui segment">
+        <form className="ui form" onSubmit={this.onFormSubmit}>
+          <div className="field">
             <label>{this.props.label}</label>
             <input
               type="text"
               value={this.state.term}
               onChange={e => this.setState({ term: e.target.value })}
             />
-          </Form.Field>
-        </Form>
-      </Segment>
+          </div>
+        </form>
+      </div>
     );
   }
 
